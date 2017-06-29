@@ -7,16 +7,16 @@ jobs:
       - image: mysql:5.7
         environment:
           - MYSQL_ROOT_PASSWORD=n0p455
-          - MYSQL_DATABASE=project_name_dev
-          - MYSQL_USER=project_name
+          - MYSQL_DATABASE=3kworkshop_dev
+          - MYSQL_USER=3kworkshop
           - MYSQL_PASSWORD=n0p455
       - image: selenium/standalone-firefox:2.53.0
         environment:
           - SCREEN_WIDTH=1920
           - SCREEN_HEIGHT=1200
         extra_hosts:
-          - "www.project_name.loc:127.0.0.1"
-          - "test.project_name.loc:127.0.0.1"
+          - "www.3kworkshop.loc:127.0.0.1"
+          - "test.3kworkshop.loc:127.0.0.1"
     working_directory: /var/www
     parallel: 1
     steps:

@@ -5,13 +5,13 @@ Feature: Basic site check
 
   Scenario: Check that homepage works
     Given I am on "/"
-    And I click "project_name"
+    And I click "3kworkshop"
     Then I should see "Hello, world!"
     And I should be on "/"
 
   @javascript
   Scenario: Check that homepage works using selenium engine
     Given I am on "/"
-    And I click "project_name"
+    And I click "3kworkshop"
     Then I should see "Hello, world!"
     And I should be on "/"

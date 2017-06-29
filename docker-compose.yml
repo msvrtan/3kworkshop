@@ -29,7 +29,7 @@ services:
       - code
     volumes:
       - ./var/logs/php-fpm/:/var/log/php-fpm
-      - ./run/shm/project_name/:/memdisk
+      - ./run/shm/3kworkshop/:/memdisk
     expose:
       - "9000"
     links:
@@ -43,8 +43,8 @@ services:
       - "3306"
     environment:
       MYSQL_ROOT_PASSWORD: n0p455
-      MYSQL_DATABASE: project_name_dev
-      MYSQL_USER: project_name
+      MYSQL_DATABASE: 3kworkshop_dev
+      MYSQL_USER: 3kworkshop
       MYSQL_PASSWORD: n0p455
 
   mysql_test:
@@ -54,8 +54,8 @@ services:
       - "3306"
     environment:
       MYSQL_ROOT_PASSWORD: n0p455
-      MYSQL_DATABASE: project_name_test
-      MYSQL_USER: project_name
+      MYSQL_DATABASE: 3kworkshop_test
+      MYSQL_USER: 3kworkshop
       MYSQL_PASSWORD: n0p455
 
 
@@ -88,7 +88,7 @@ services:
       - "4444"
     extra_hosts:
       - "www.test.ci:172.17.0.1"
-      - "www.project_name.loc:172.17.0.1"
+      - "www.3kworkshop.loc:172.17.0.1"
     environment:
        SCREEN_WIDTH: 1920
        SCREEN_HEIGHT: 1200
